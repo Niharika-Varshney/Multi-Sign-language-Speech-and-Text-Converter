@@ -39,7 +39,6 @@ These datasets were used to train and validate machine learning models for gestu
     git clone https://github.com/Niharika-Varshney/Sign-Language-To-Speech-and-Text-Converter
     cd Sign-Language-To-Speech-and-Text-Converter
     ```
-<br>
 
 ### Step 2: Download Datasets
 
