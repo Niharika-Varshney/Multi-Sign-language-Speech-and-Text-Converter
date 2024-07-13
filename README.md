@@ -54,6 +54,79 @@ These datasets were used to train and validate machine learning models for gestu
 
 ### Step 2: Data Augmentation
 
-- If needed, run `dataaugmentation.py` to increase the dataset size.
+- If needed, run `Data_Augmentation.py` to increase the dataset size.
   ```sh
-  python dataaugmentation.py
+  python Data_Augmentation.py
+
+### Step 3: Data Processing
+
+- Process the datasets by running the respective data processing scripts:
+  - **For American Sign Language (ASL):**
+    ```sh
+    python ASL_Data_Processing.py
+    ```
+  - **For Indian Sign Language (ISL):**
+    ```sh
+    python ISL_Data_Processing.py
+    ```
+  - **For Spanish Sign Language (SSL):**
+    ```sh
+    python SSL_Data_Processing.py
+    ```
+  - **For British Sign Language (BSL):**
+    ```sh
+    python BSL_Data_Processing.py
+    ```
+
+### Step 4:Train Classifiers
+
+- Train classifiers for each dataset by running the respective classifier scripts:
+  - **For American Sign Language (ASL)**:
+    ```sh
+    python ASL_Train_Classifier.py
+    ```
+  - **For Indian Sign Language (ISL)**:
+    ```sh
+    python ISL_Train_Classifier.py
+    ```
+  - **For Spanish Sign Language (SSL)**:
+    ```sh
+    python SSL_Train_Classifier.py
+    ```
+  - **For British Sign Language (BSL)**:
+    ```sh
+    python BSL_Train_Classifier.py
+    ```
+
+
+### Step 5:Testing
+
+- Testing model for each dataset by running the respective testing scripts:
+  - **For American Sign Language (ASL)**:
+    ```sh
+    python ASL_Testing.py
+    ```
+  - **For Indian Sign Language (ISL)**:
+    ```sh
+    python ISL_Testing.py
+    ```
+  - **For Spanish Sign Language (SSL)**:
+    ```sh
+    python SSL_Testing.py
+    ```
+  - **For British Sign Language (BSL)**:
+    ```sh
+    python BSL_Testing.py
+    ```
+
+
+### Step 6:Deploy the Application
+
+- Copy the saved models (```model_ISL```, ```model_ASL```, ```model_SSL```, ```model_BSL```) into the ```Frontend_SignLanguage``` directory.
+- Run the application by executing ```app.py```
+  ```sh
+  python app.py
+  ```
+
+
+Now, your application should be up and running, ready to convert ASL, BSL, SSL, and ISL gestures into spoken language and text.
