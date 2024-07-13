@@ -2,7 +2,7 @@
 
 
 ## Overview
-This project is designed as a tool for <u>communication between visually impaired individuals and speech impaired individuals</u>, converting American Sign Language (ASL), British Sign Language (BSL), Spanish Sign Language (SSL), and Indian Sign Language (ISL) gestures into spoken language and text. It employs computer vision and machine learning techniques, leveraging MediaPipe for accurate hand landmark detection, OpenCV for efficient image processing, OS for seamless file handling, Pickle for data serialization, scikit-learn for robust machine learning models, and NumPy for essential numerical computations. By translating gestures into both audible speech and displayed text, this tool aims to facilitate better communication accessibility for diverse user needs.
+This project is designed as a tool for **communication between visually impaired individuals and speech impaired individuals**, converting **American Sign Language (ASL), British Sign Language (BSL), Spanish Sign Language (SSL), and Indian Sign Language (ISL)** gestures into spoken language and text. It employs computer vision and machine learning techniques, leveraging MediaPipe for accurate hand landmark detection, OpenCV for efficient image processing, OS for seamless file handling, Pickle for data serialization, scikit-learn for robust machine learning models, and NumPy for essential numerical computations. By translating gestures into both audible speech and displayed text, this tool aims to facilitate better communication accessibility for diverse user needs.
 
 ## Features
 - **Hand Gesture Recognition:** Utilizes MediaPipe and OpenCV to detect and track hand landmarks, identifying gestures in real-time.
@@ -32,3 +32,28 @@ This project is designed as a tool for <u>communication between visually impaire
 
 These datasets were used to train and validate machine learning models for gesture recognition and translation into speech and text across multiple sign languages.
 
+## How to Use This Project
+
+### Step 1: Download Datasets
+
+1. **American Sign Language (ASL)**
+   - Download the [ASL Alphabet Dataset from Kaggle](https://www.kaggle.com/datasets/grassknoted/asl-alphabet?select=asl_alphabet_train).
+   - Save the dataset into a directory named `Data_ASL`.
+
+2. **Indian Sign Language (ISL)**
+   - Download the [Indian Sign Language Dataset from Kaggle](https://www.kaggle.com/datasets/vaishnaviasonawane/indian-sign-language-dataset).
+   - Save the dataset into a directory named `Data_ISL`.
+
+3. **Spanish Sign Language (SSL)**
+   - Download the [Spanish Sign Language Alphabet Dataset from Kaggle](https://www.kaggle.com/datasets/kirlelea/spanish-sign-language-alphabet-static).
+   - Save the dataset into a directory named `Data_SSL`.
+
+4. **British Sign Language (BSL)**
+   - Download the [BSL Numbers and Alphabet Hand Position Dataset from Kaggle](https://www.kaggle.com/datasets/erentatepe/bsl-numbers-and-alphabet-hand-position-for-mediapipe?select=2_HAND_DATASET).
+   - Save the dataset into a directory named `Data_BSL`.
+
+### Step 2: Data Augmentation
+
+- If needed, run `dataaugmentation.py` to increase the dataset size.
+  ```sh
+  python dataaugmentation.py
