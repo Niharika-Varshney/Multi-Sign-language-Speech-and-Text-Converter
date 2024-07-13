@@ -18,7 +18,7 @@ This project is designed as a tool for **communication between visually impaired
 - **Pickle**: Used for serializing and deserializing Python objects, enabling efficient storage and retrieval of trained machine learning models.
 - **scikit-learn**: Provides a wide range of machine learning algorithms and tools for data preprocessing, model selection, and evaluation, used here for training and predicting hand gesture classifications.
 - **NumPy**: Essential for scientific computing in Python, used extensively for numerical operations and handling multi-dimensional arrays, crucial in preprocessing data and performing computations within the machine learning pipeline.
-
+- **pyttsx3**: For providing text-to-speech functionality.
 
 ## Datasets Used
 
