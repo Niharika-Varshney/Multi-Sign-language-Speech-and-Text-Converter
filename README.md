@@ -33,8 +33,15 @@ This project is designed as a tool for **communication between visually impaired
 These datasets were used to train and validate machine learning models for gesture recognition and translation into speech and text across multiple sign languages.
 
 ## How to Use This Project
+### Step 1: Clone the repository:
 
-### Step 1: Download Datasets
+    ```
+    git clone https://github.com/Niharika-Varshney/Sign-Language-To-Speech-and-Text-Converter
+    cd Sign-Language-To-Speech-and-Text-Converter
+    ```
+<br>
+
+### Step 2: Download Datasets
 
 1. **American Sign Language (ASL)**
    - Download the [ASL Alphabet Dataset from Kaggle](https://www.kaggle.com/datasets/grassknoted/asl-alphabet?select=asl_alphabet_train).
@@ -52,13 +59,13 @@ These datasets were used to train and validate machine learning models for gestu
    - Download the [BSL Numbers and Alphabet Hand Position Dataset from Kaggle](https://www.kaggle.com/datasets/erentatepe/bsl-numbers-and-alphabet-hand-position-for-mediapipe?select=2_HAND_DATASET).
    - Save the dataset into a directory named `Data_BSL`.
 
-### Step 2: Data Augmentation
+### Step 3: Data Augmentation
 
 - If needed, run `Data_Augmentation.py` to increase the dataset size.
   ```sh
   python Data_Augmentation.py
 
-### Step 3: Data Processing
+### Step 4: Data Processing
 
 - Process the datasets by running the respective data processing scripts:
   - **For American Sign Language (ASL):**
@@ -78,7 +85,7 @@ These datasets were used to train and validate machine learning models for gestu
     python BSL_Data_Processing.py
     ```
 
-### Step 4:Train Classifiers
+### Step 5: Train Classifiers
 
 - Train classifiers for each dataset by running the respective classifier scripts:
   - **For American Sign Language (ASL)**:
@@ -99,7 +106,7 @@ These datasets were used to train and validate machine learning models for gestu
     ```
 
 
-### Step 5:Testing
+### Step 6: Testing
 
 - Testing model for each dataset by running the respective testing scripts:
   - **For American Sign Language (ASL)**:
@@ -120,7 +127,7 @@ These datasets were used to train and validate machine learning models for gestu
     ```
 
 
-### Step 6:Deploy the Application
+### Step 7: Deploy the Application
 
 - Copy the saved models (```model_ISL```, ```model_ASL```, ```model_SSL```, ```model_BSL```) into the ```Frontend_SignLanguage``` directory.
 - Run the application by executing ```app.py```
