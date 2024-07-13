@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Detection</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Main container for centering content vertically and horizontally -->
+    <div class="container">
+        <!-- Container for the title -->
+        <div class="title-container">
+            <h1>{{ language }}</h1>
+        </div>
+        <!-- Container for the video feed -->
+        <div>
+            <img id="videoElement" src="/video_feed" alt="Video feed">
+        </div>
+        <!-- Container for the control buttons, fixed at the bottom of the viewport -->
+        <div id="controls" class="button-container">
+            <!-- Display predicted text -->
+            <p>Predicted Text: <span id="predictedText"></span></p>
+            <!-- Button to clear the last character -->
+            <button onclick="clearLastCharacter()" class="button">Clear Last Character</button>
+            <!-- Button to speak the sentence -->
+            <button onclick="speakSentence()" class="button button2">Speak Sentence</button>
+            <!-- Button to clear the entire sentence -->
+            <button onclick="clearSentence()" class="button button3">Clear Sentence</button>
+            <!-- Button to add a space -->
+            <button onclick="addspace()" class="button button4">Space</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for handling button actions and updating predicted text -->
+    <script>
+        const predictedTextElement = document.getElementById('predictedText');
+
+        // Function to fetch and update the predicted text
+        function updatePredictedText() {
+            fetch('/get_predicted_text')
+                .then(response => response.json())
+                .then(data => {
+                    predictedTextElement.textContent = data.predicted_text;
+                });
+        }
+
+        // Function to clear the entire sentence
+        function clearSentence() {
+            fetch('/clear_sentence', { method: 'POST' })
+                .then(response => response.json())
+                .then(() => {
+                    updatePredictedText();
+                });
+        }
+
+        // Function to clear the last character of the predicted text
+        function clearLastCharacter() {
+            fetch('/clear_last_character', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    predictedTextElement.textContent = data.predicted_text;
+                });
+        }
+
+        // Function to send a request to speak the sentence
+        function speakSentence() {
+            fetch('/speak_sentence', { method: 'POST' });
+        }
+
+        // Function to add a space in the predicted text
+        function addspace() {
+            fetch('/add_space', { method: 'POST' });
+        }
+
+        // Periodically update the predicted text every second
+        setInterval(updatePredictedText, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* General reset for padding, margin, and box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Lucida Console', cursive;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh; /* Cover entire viewport height */
+}
+
+/* Title container styling */
+.title-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust top margin as needed */
+}
+
+.title-container h1 {
+    margin: 0;
+    font-size: 6.5em; /* Increase font size for the title */
+    line-height: 1.2; /* Adjust line height for spacing between lines */
+}
+
+/* Button container styling */
+.button-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.9);
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Large button styling */
+.large-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 100px 30px; /* Adjusted padding for button size */
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    font-size: 2em; /* Adjusted font size */
+}
+
+.large-button span {
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.large-button:hover {
+    background-color: #555; /* Darken background color on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.large-button:hover span {
+    color: black; /* Change text color on hover */
+}
+
+/* For index.html */
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button2 {
+    background-color: #008CBA; /* Blue */
+}
+
+.button3 {
+    background-color: #f44336; /* Red */
+}
+
+.button4 {
+    background-color: #e7e7e7; 
+    color: black; /* Gray */
+}
+
+/* Heading and paragraph styling */
+h1 {
+    font-size: 5em; /* Adjust this value to increase or decrease the size */
+}
+
+p {
+    font-size: 2em; /* Adjust this value to increase or decrease the size */
+}
