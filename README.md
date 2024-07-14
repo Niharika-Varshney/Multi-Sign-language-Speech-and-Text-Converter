@@ -4,6 +4,10 @@
 ## Overview
 This project is designed as a tool for **communication between visually impaired individuals and speech impaired individuals**, converting **American Sign Language (ASL), British Sign Language (BSL), Spanish Sign Language (SSL), and Indian Sign Language (ISL)** gestures into spoken language and text. It employs computer vision and machine learning techniques, leveraging MediaPipe for accurate hand landmark detection, OpenCV for efficient image processing, OS for seamless file handling, Pickle for data serialization, scikit-learn for robust machine learning models, and NumPy for essential numerical computations. By translating gestures into both audible speech and displayed text, this tool aims to facilitate better communication accessibility for diverse user needs.
 
+## Project Demo
+To see **Project Demo** click on the link [Project Demo](https://drive.google.com/file/d/1eAefi9IvraNHTK5xKe65iyb6HNDIpLYs/view?usp=sharing)
+
+
 ## Features
 - **Hand Gesture Recognition:** Utilizes MediaPipe and OpenCV to detect and track hand landmarks, identifying gestures in real-time.
 - **Multi-language Support:** Recognizes gestures from American Sign Language (ASL), British Sign Language (BSL), Spanish Sign Language (SSL), and Indian Sign Language (ISL) converting them into words and speaking them.
