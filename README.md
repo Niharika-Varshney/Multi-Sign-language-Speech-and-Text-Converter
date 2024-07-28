@@ -1,4 +1,4 @@
-# Sign-Language-To-Speech-and-Text-Converter
+# Multi Sign Language:Speech and Text Converter
 
 
 ## Overview
@@ -40,8 +40,8 @@ These datasets were used to train and validate machine learning models for gestu
 ### Step 1: Clone the repository:
 
     ```
-    git clone https://github.com/Niharika-Varshney/Sign-Language-To-Speech-and-Text-Converter
-    cd Sign-Language-To-Speech-and-Text-Converter
+    git clone https://github.com/Niharika-Varshney/Multi-Sign-language-Speech-and-Text-Converter
+    cd Multi-Sign-language-Speech-and-Text-Converter
     ```
 
 ### Step 2: Download Datasets
