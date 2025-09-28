@@ -135,5 +135,4 @@ These datasets were used to train and validate machine learning models for gestu
   python app.py
   ```
 
-
 Now, your application should be up and running, ready to convert ASL, BSL, SSL, and ISL gestures into spoken language and text.
