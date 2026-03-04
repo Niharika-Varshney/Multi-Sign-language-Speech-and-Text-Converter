@@ -9,13 +9,13 @@ import pyttsx3
 app = Flask(__name__)
 
 # Load models for different sign languages from pickled files
-model_asl_dict = pickle.load(open('model_ASL.pkl', 'rb'))
+model_asl_dict = pickle.load(open('Frontend_SignLanguage/model_ASL.pkl', 'rb'))
 model_asl = model_asl_dict['model']
-model_isl_dict = pickle.load(open('model_ISL.pkl', 'rb'))
+model_isl_dict = pickle.load(open('Frontend_SignLanguage/model_ISL.pkl', 'rb'))
 model_isl = model_isl_dict['model']
-model_ssl_dict = pickle.load(open('model_SSL.pkl', 'rb'))
+model_ssl_dict = pickle.load(open('Frontend_SignLanguage/model_SSL.pkl', 'rb'))
 model_ssl = model_ssl_dict['model']
-model_bsl_dict = pickle.load(open('model_BSL.pkl', 'rb'))
+model_bsl_dict = pickle.load(open('Frontend_SignLanguage/model_BSL.pkl', 'rb'))
 model_bsl = model_bsl_dict['model']
 
 # Initialize MediaPipe hands for hand landmark detection
@@ -192,4 +192,5 @@ def add_space():
     return jsonify(predicted_text=predicted_text)
 
 if __name__ == '__main__':
+
     app.run(debug=True)
